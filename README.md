@@ -38,24 +38,9 @@ Toda la documentación detallada está organizada en la carpeta `docs/`:
 
 ---
 
-## 📓 Bitácora del proyecto
-
-### Estado actual
-
-* Desarrollo de la fuente de alta tensión
-
-### Tareas pendientes
-
 
 ---
 
-## 💰 Control de costos
-
-El registro de componentes y gastos se encuentra en:
-
-📄 `costos/costos.csv`
-
----
 
 ## 📚 Bibliografía
 
@@ -72,15 +57,6 @@ Ver:
 
 ---
 
-## ⚠️ Seguridad
-
-Este proyecto trabaja con **alta tensión (kV)**, lo cual implica riesgos graves.
-
-* No manipular energizado
-* Usar aislamiento adecuado
-* Realizar pruebas en condiciones controladas
-
----
 
 ## 🚀 Estado del proyecto
 
