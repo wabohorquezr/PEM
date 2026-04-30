@@ -43,6 +43,13 @@ C --> D[Rectificación HV]
 
 **Función:** convertir corriente continua en señal de alta frecuencia para excitar el transformador.
 
+**Nota** : Requiere tener un Toroide que comercialmete no se consiguio con el alambrado correspondeiente por lo que la  mejor opcion podria ser el calculo del mismo:
+
+suponiendo un μr≈800
+
+serian 13 vueltas 
+y o.5 m de el alambre (14AWG)
+
 **Simulación LTspice:** [zns.asc](/simulaciones/zvs.asc)
 
 ---
