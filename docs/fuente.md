@@ -13,7 +13,6 @@ flowchart LR
 A[Fuente 12V CC] --> B[Conmutación ZVS]
 B --> C[Transformación Flyback]
 C --> D[Rectificación HV]
-D --> E[Salida HV]
 ```
 
 ---
@@ -93,7 +92,7 @@ D --> E[Salida HV]
 * Análisis de la etapa ZVS y comportamiento del sistema
 
 ## Piezas 
-###  Lista de Piezas - Fuente Alta
+## Lista de Piezas - Fuente Alta
 
 ### 🔽 Componentes
 
@@ -102,12 +101,13 @@ D --> E[Salida HV]
 <details>
 <summary><b>Cobre 14 AWG</b></summary>
 
-| 🖼️ Imagen                                    | 📄 Descripción                              |
-| --------------------------------------------- | ------------------------------------------- |
-| ![](/docs/Piezas_fuente_alta/Cobre-14AWG.png)  | **Tipo:** Cable de cobre esmaltado / sólido |
-| **Calibre:** 14 AWG                           |                                             |
-| **Diámetro:** ~1.63 mm                        |                                             |
-| **Uso:** Bobinados (ZVS, inductores, flyback) |                                             |
+| 🖼️ Imagen                                   | 📄 Descripción           |
+| -------------------------------------------- | ------------------------ |
+| ![](/docs/Piezas_fuente_alta/Cobre-14AWG.png) | **Tipo:** Cable de cobre |
+| **Calibre:** 14 AWG                          |                          |
+| **Diámetro conductor:** ~1.63 mm             |                          |
+| **Diámetro con esmalte:** ~1.7–1.8 mm        |                          |
+| **Uso:** Bobinados                           |                          |
 
 </details>
 
@@ -119,9 +119,10 @@ D --> E[Salida HV]
 | 🖼️ Imagen                                      | 📄 Descripción         |
 | ----------------------------------------------- | ---------------------- |
 | ![](/docs/Piezas_fuente_alta/Condensador1uf.png) | **Capacitancia:** 1 µF |
-| **Tipo:** Poliéster / MKP                       |                        |
-| **Voltaje típico:** 100V+                       |                        |
-| **Uso:** Resonancia, filtrado                   |                        |
+| **Tipo:** Poliéster                             |                        |
+| **Dimensiones:** ~10 × 6 × 12 mm                |                        |
+| **Pitch:** ~5 mm                                |                        |
+| **Uso:** Filtrado                               |                        |
 
 </details>
 
@@ -134,7 +135,9 @@ D --> E[Salida HV]
 | ------------------------------------------------ | ---------------------- |
 | ![](/docs/Piezas_fuente_alta/Condensador2uFZ.png) | **Capacitancia:** 2 µF |
 | **Tipo:** Película                               |                        |
-| **Uso:** Banco resonante (ZVS)                   |                        |
+| **Dimensiones:** ~18 × 8 × 14 mm                 |                        |
+| **Pitch:** ~10 mm                                |                        |
+| **Uso:** Resonancia                              |                        |
 
 </details>
 
@@ -146,8 +149,9 @@ D --> E[Salida HV]
 | 🖼️ Imagen                                      | 📄 Descripción           |
 | ----------------------------------------------- | ------------------------ |
 | ![](/docs/Piezas_fuente_alta/Condensador4U7.png) | **Capacitancia:** 4.7 µF |
-| **Tipo:** MKP recomendado                       |                          |
-| **Voltaje:** 100V–400V                          |                          |
+| **Tipo:** MKP                                   |                          |
+| **Dimensiones:** ~26 × 12 × 18 mm               |                          |
+| **Pitch:** ~15–22.5 mm                          |                          |
 | **Uso:** Tanque resonante                       |                          |
 
 </details>
@@ -160,9 +164,10 @@ D --> E[Salida HV]
 | 🖼️ Imagen                                      | 📄 Descripción     |
 | ----------------------------------------------- | ------------------ |
 | ![](/docs/Piezas_fuente_alta/Diodo%201N5817.png) | **Tipo:** Schottky |
-| **Corriente:** 1A                               |                    |
-| **Voltaje inverso:** 20V                        |                    |
-| **Uso:** Rectificación rápida                   |                    |
+| **Encapsulado:** DO-41                          |                    |
+| **Longitud:** ~5.2 mm                           |                    |
+| **Diámetro:** ~2.7 mm                           |                    |
+| **Uso:** Rectificación                          |                    |
 
 </details>
 
@@ -175,7 +180,8 @@ D --> E[Salida HV]
 | ------------------------------------------------ | ------------------------ |
 | ![](/docs/Piezas_fuente_alta/FuenteConmutada.png) | **Entrada:** 110–220V AC |
 | **Salida:** 12V DC                               |                          |
-| **Uso:** Alimentación del driver ZVS             |                          |
+| **Dimensiones:** ~110 × 78 × 36 mm               |                          |
+| **Uso:** Alimentación                            |                          |
 
 </details>
 
@@ -187,8 +193,10 @@ D --> E[Salida HV]
 | 🖼️ Imagen                                      | 📄 Descripción        |
 | ----------------------------------------------- | --------------------- |
 | ![](/docs/Piezas_fuente_alta/toroideFerrita.jpg) | **Material:** Ferrita |
-| **Inductancia típica:** 100–220 µH              |                       |
-| **Uso:** Inductor del circuito ZVS              |                       |
+| **Diámetro exterior:** ~30–50 mm                |                       |
+| **Diámetro interior:** ~15–25 mm                |                       |
+| **Altura:** ~10–20 mm                           |                       |
+| **Uso:** Inductor                               |                       |
 
 </details>
 
@@ -200,8 +208,8 @@ D --> E[Salida HV]
 | 🖼️ Imagen                                            | 📄 Descripción         |
 | ----------------------------------------------------- | ---------------------- |
 | ![](/docs/Piezas_fuente_alta/TransformadorFlyback.png) | **Tipo:** Alta tensión |
-| **Salida:** kV                                        |                        |
-| **Uso:** Generación de alto voltaje para el Marx      |                        |
+| **Dimensiones:** ~60 × 40 × 30 mm                     |                        |
+| **Uso:** Generación de kV                             |                        |
 
 </details>
 
@@ -213,9 +221,10 @@ D --> E[Salida HV]
 | 🖼️ Imagen                                          | 📄 Descripción   |
 | --------------------------------------------------- | ---------------- |
 | ![](/docs/Piezas_fuente_alta/TransistoirIRF640N.jpg) | **Tipo:** MOSFET |
-| **Voltaje:** 200V                                   |                  |
-| **Corriente:** 18A                                  |                  |
-| **Uso:** Etapa de potencia ZVS                      |                  |
+| **Encapsulado:** TO-220                             |                  |
+| **Altura:** ~15 mm                                  |                  |
+| **Ancho:** ~10 mm                                   |                  |
+| **Uso:** Potencia                                   |                  |
 
 </details>
 
@@ -224,12 +233,16 @@ D --> E[Salida HV]
 <details>
 <summary><b>Transistor 2N7000</b></summary>
 
-| 🖼️ Imagen                                         | 📄 Descripción           |
-| -------------------------------------------------- | ------------------------ |
-| ![](/docs/Piezas_fuente_alta/Transistor-2n7000.png) | **Tipo:** MOSFET pequeño |
-| **Voltaje:** 60V                                   |                          |
-| **Uso:** Control / driver                          |                          |
+| 🖼️ Imagen                                         | 📄 Descripción   |
+| -------------------------------------------------- | ---------------- |
+| ![](/docs/Piezas_fuente_alta/Transistor-2n7000.png) | **Tipo:** MOSFET |
+| **Encapsulado:** TO-92                             |                  |
+| **Altura:** ~5 mm                                  |                  |
+| **Ancho:** ~4 mm                                   |                  |
+| **Uso:** Control                                   |                  |
 
 </details>
+
+
 
 ---
