@@ -1,86 +1,115 @@
-# Fuente de Alta Tensión
+# ⚡ Fuente de Alta Tensión para Generador de Marx (≈13 kV)
 
-## Descripción
+## 📌 Descripción
 
-La fuente de alta tensión es la etapa encargada de generar el voltaje necesario para la carga del generador de Marx. Parte de una fuente de 12 V CC y, mediante conversión y elevación, alcanza niveles de alta tensión.
+Este proyecto desarrolla una fuente de alta tensión basada en una entrada de 12 V CC, diseñada para alimentar un generador de Marx en etapas posteriores. El sistema convierte, eleva y rectifica la energía eléctrica hasta alcanzar niveles de kilovoltios.
 
-## Arquitectura
+---
+
+## 🧠 Arquitectura del sistema
+
 ```mermaid
 flowchart LR
 A[Fuente 12V CC] --> B[Conmutación ZVS]
 B --> C[Transformación Flyback]
 C --> D[Rectificación HV]
+D --> E[Salida HV]
 ```
 
 ---
 
-##  Descripción por Etapas
+## ⚙️ Etapas del sistema
 
-### Fuente Primaria de Energía (12V CC)
+### 🔋 1. Fuente primaria (12 V CC)
 
-| Parámetro | Valor típico |
-|---|---|
-| Tensión nominal | 12 V |
-| Corriente recomendada | 5 A – 15 A |
+| Parámetro             | Valor típico |
+| --------------------- | ------------ |
+| Tensión nominal       | 12 V         |
+| Corriente recomendada | 5 A – 15 A   |
 
 **Función:** suministrar potencia de entrada al sistema.
 
-### Etapa de Conmutación ZVS
+---
 
-| Parámetro | Valor típico |
-|---|---|
-| Topología | Resonante |
-| Frecuencia | 20 kHz – 60 kHz |
-| Dispositivos | MOSFETs |
+### ⚡ 2. Conmutación ZVS
 
+| Parámetro    | Valor típico    |
+| ------------ | --------------- |
+| Topología    | Resonante       |
+| Frecuencia   | 20 kHz – 60 kHz |
+| Dispositivos | MOSFETs         |
 
-![Esquematico del circuito zvs](Esquematicode-ZVS.png)
+![Esquemático del circuito ZVS](Esquematicode-ZVS.png)
 
 **Función:** convertir corriente continua en señal de alta frecuencia para excitar el transformador.
-#### Simulación LTspice : [marx_generator.asc](./zns.asc)
 
-###  Etapa Elevadora Flyback
+**Simulación LTspice:** [zns.asc](./zns.asc)
 
-| Parámetro | Descripción |
-|---|---|
-| Núcleo | Ferrita |
-| Relación de espiras | Alta |
-| Salida | Alta tensión pulsante |
+---
+
+### 🔄 3. Transformador Flyback
+
+| Parámetro           | Descripción           |
+| ------------------- | --------------------- |
+| Núcleo              | Ferrita               |
+| Relación de espiras | Alta                  |
+| Salida              | Alta tensión pulsante |
 
 **Función:** elevar el nivel de tensión mediante acoplamiento magnético.
 
-###  Etapa Elevadora Flyback
 ---
 
-### Rectificación de Alta Tensión
+### ⚙️ 4. Rectificación de Alta Tensión
 
-
-| Elemento | Función |
-|---|---|
-| Diodo HV | Rectificación |
+| Elemento     | Función           |
+| ------------ | ----------------- |
+| Diodo HV     | Rectificación     |
 | Capacitor HV | Filtrado opcional |
 
-**Salida estimada:** 
-![Datos Salida de el conjunto de Alta Tension](20260423_152109.png)
+**Función:** convertir la señal pulsante en una salida de alta tensión continua.
 
-![Salida de el conjunto de Alta Tension](20260423_152220.png)
----
+**Resultados experimentales:**
 
-### Etapa de Carga del Generador Marx
+![Datos de salida](20260423_152109.png)
 
-- Resistencias limitadoras de corriente  
-- Capacitores por etapa  
-- Carga en paralelo  
-- Descarga en serie
+![Salida de alta tensión](20260423_152220.png)
 
 ---
 
-### Salida Pulsada
+## 📤 Salida del sistema
 
-| Parámetro | Valor |
-|---|---|
-| Voltaje pico estimado | ≈13 kV |
-| Duración | Corta |
-| Naturaleza | Impulso |
+| Parámetro        | Valor                  |
+| ---------------- | ---------------------- |
+| Voltaje estimado | ≈ 13 kV                |
+| Tipo de señal    | Continua (rectificada) |
 
 ---
+
+## 🔬 Simulación
+
+* Archivo: `zns.asc`
+* Herramienta: LTspice
+* Análisis de la etapa ZVS y comportamiento del sistema
+
+---
+
+## 📊 Estado del proyecto
+
+🟡 En desarrollo
+Actualmente en pruebas de la fuente de alta tensión.
+
+---
+
+## 📂 Relación con el proyecto completo
+
+Esta fuente será utilizada para alimentar el generador de Marx, el cual permitirá generar pulsos de alta tensión en etapas futuras.
+
+---
+
+## ⚠️ Seguridad
+
+El sistema maneja **alta tensión (kV)**, lo que representa un riesgo significativo:
+
+* No operar energizado sin protección
+* Usar aislamiento adecuado
+* Realizar pruebas en entornos controlados
