@@ -39,11 +39,12 @@ D --> E[Salida HV]
 | Frecuencia   | 20 kHz – 60 kHz |
 | Dispositivos | MOSFETs         |
 
-![Esquemático del circuito ZVS](Esquematicode-ZVS.png)
+![Esquematico de una fuente zvs](/simulaciones/Esquematicode-ZVS.png)
+
 
 **Función:** convertir corriente continua en señal de alta frecuencia para excitar el transformador.
 
-**Simulación LTspice:** [zns.asc](./zns.asc)
+**Simulación LTspice:** [zns.asc](/simulaciones/zvs.asc)
 
 ---
 
@@ -70,9 +71,9 @@ D --> E[Salida HV]
 
 **Resultados experimentales:**
 
-![Datos de salida](20260423_152109.png)
+![Datos de salida](/simulaciones/20260423_152109.png)
 
-![Salida de alta tensión](20260423_152220.png)
+![Salida de alta tensión](/simulaciones/20260423_152220.png)
 
 ---
 
