@@ -1,9 +1,7 @@
 
----
 
 # 📁 `docs/generador_marx.md`
 
-```md
 # Generador de Marx
 
 ## Descripción
