@@ -93,78 +93,143 @@ D --> E[Salida HV]
 * Análisis de la etapa ZVS y comportamiento del sistema
 
 ## Piezas 
+###  Lista de Piezas - Fuente Alta
 
-### 📦 Lista de Piezas - Fuente Alta
+### 🔽 Componentes
 
-### 🔽 Ver componentes
+---
 
 <details>
-<summary>Cobre 14 AWG</summary>
+<summary><b>Cobre 14 AWG</b></summary>
 
-![Cobre 14AWG](docs/Piezas_fuente_alta/Cobre-14AWG.png)
+| 🖼️ Imagen                                    | 📄 Descripción                              |
+| --------------------------------------------- | ------------------------------------------- |
+| ![](/docs/Piezas_fuente_alta/Cobre-14AWG.png)  | **Tipo:** Cable de cobre esmaltado / sólido |
+| **Calibre:** 14 AWG                           |                                             |
+| **Diámetro:** ~1.63 mm                        |                                             |
+| **Uso:** Bobinados (ZVS, inductores, flyback) |                                             |
 
 </details>
 
-<details>
-<summary>Condensador 1 µF</summary>
+---
 
-![Condensador 1uF](docs/Piezas_fuente_alta/Condensador1uf.png)
+<details>
+<summary><b>Condensador 1 µF</b></summary>
+
+| 🖼️ Imagen                                      | 📄 Descripción         |
+| ----------------------------------------------- | ---------------------- |
+| ![](/docs/Piezas_fuente_alta/Condensador1uf.png) | **Capacitancia:** 1 µF |
+| **Tipo:** Poliéster / MKP                       |                        |
+| **Voltaje típico:** 100V+                       |                        |
+| **Uso:** Resonancia, filtrado                   |                        |
 
 </details>
 
-<details>
-<summary>Condensador 2 µF</summary>
+---
 
-![Condensador 2uF](docs/Piezas_fuente_alta/Condensador2uFZ.png)
+<details>
+<summary><b>Condensador 2 µF</b></summary>
+
+| 🖼️ Imagen                                       | 📄 Descripción         |
+| ------------------------------------------------ | ---------------------- |
+| ![](/docs/Piezas_fuente_alta/Condensador2uFZ.png) | **Capacitancia:** 2 µF |
+| **Tipo:** Película                               |                        |
+| **Uso:** Banco resonante (ZVS)                   |                        |
 
 </details>
 
-<details>
-<summary>Condensador 4.7 µF</summary>
+---
 
-![Condensador 4u7](docs/Piezas_fuente_alta/Condensador4U7.png)
+<details>
+<summary><b>Condensador 4.7 µF</b></summary>
+
+| 🖼️ Imagen                                      | 📄 Descripción           |
+| ----------------------------------------------- | ------------------------ |
+| ![](/docs/Piezas_fuente_alta/Condensador4U7.png) | **Capacitancia:** 4.7 µF |
+| **Tipo:** MKP recomendado                       |                          |
+| **Voltaje:** 100V–400V                          |                          |
+| **Uso:** Tanque resonante                       |                          |
 
 </details>
 
-<details>
-<summary>Diodo 1N5817</summary>
+---
 
-![Diodo 1N5817](docs/Piezas_fuente_alta/Diodo%201N5817.png)
+<details>
+<summary><b>Diodo 1N5817</b></summary>
+
+| 🖼️ Imagen                                      | 📄 Descripción     |
+| ----------------------------------------------- | ------------------ |
+| ![](/docs/Piezas_fuente_alta/Diodo%201N5817.png) | **Tipo:** Schottky |
+| **Corriente:** 1A                               |                    |
+| **Voltaje inverso:** 20V                        |                    |
+| **Uso:** Rectificación rápida                   |                    |
 
 </details>
 
-<details>
-<summary>Fuente Conmutada</summary>
+---
 
-![Fuente](docs/Piezas_fuente_alta/FuenteConmutada.png)
+<details>
+<summary><b>Fuente Conmutada</b></summary>
+
+| 🖼️ Imagen                                       | 📄 Descripción           |
+| ------------------------------------------------ | ------------------------ |
+| ![](/docs/Piezas_fuente_alta/FuenteConmutada.png) | **Entrada:** 110–220V AC |
+| **Salida:** 12V DC                               |                          |
+| **Uso:** Alimentación del driver ZVS             |                          |
 
 </details>
 
-<details>
-<summary>Toroide de Ferrita</summary>
+---
 
-![Toroide](docs/Piezas_fuente_alta/toroideFerrita.jpg)
+<details>
+<summary><b>Toroide de Ferrita</b></summary>
+
+| 🖼️ Imagen                                      | 📄 Descripción        |
+| ----------------------------------------------- | --------------------- |
+| ![](/docs/Piezas_fuente_alta/toroideFerrita.jpg) | **Material:** Ferrita |
+| **Inductancia típica:** 100–220 µH              |                       |
+| **Uso:** Inductor del circuito ZVS              |                       |
 
 </details>
 
-<details>
-<summary>Transformador Flyback</summary>
+---
 
-![Flyback](docs/Piezas_fuente_alta/TransformadorFlyback.png)
+<details>
+<summary><b>Transformador Flyback</b></summary>
+
+| 🖼️ Imagen                                            | 📄 Descripción         |
+| ----------------------------------------------------- | ---------------------- |
+| ![](/docs/Piezas_fuente_alta/TransformadorFlyback.png) | **Tipo:** Alta tensión |
+| **Salida:** kV                                        |                        |
+| **Uso:** Generación de alto voltaje para el Marx      |                        |
 
 </details>
 
-<details>
-<summary>Transistor IRF640N</summary>
+---
 
-![IRF640N](docs/Piezas_fuente_alta/TransistoirIRF640N.jpg)
+<details>
+<summary><b>Transistor IRF640N</b></summary>
+
+| 🖼️ Imagen                                          | 📄 Descripción   |
+| --------------------------------------------------- | ---------------- |
+| ![](/docs/Piezas_fuente_alta/TransistoirIRF640N.jpg) | **Tipo:** MOSFET |
+| **Voltaje:** 200V                                   |                  |
+| **Corriente:** 18A                                  |                  |
+| **Uso:** Etapa de potencia ZVS                      |                  |
 
 </details>
 
-<details>
-<summary>Transistor 2N7000</summary>
+---
 
-![2N7000](docs/Piezas_fuente_alta/Transistor-2n7000.png)
+<details>
+<summary><b>Transistor 2N7000</b></summary>
+
+| 🖼️ Imagen                                         | 📄 Descripción           |
+| -------------------------------------------------- | ------------------------ |
+| ![](/docs/Piezas_fuente_alta/Transistor-2n7000.png) | **Tipo:** MOSFET pequeño |
+| **Voltaje:** 60V                                   |                          |
+| **Uso:** Control / driver                          |                          |
 
 </details>
 
+---
