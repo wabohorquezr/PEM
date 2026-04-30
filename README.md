@@ -34,8 +34,7 @@ Toda la documentación detallada está organizada en la carpeta `docs/`:
 
 ## 🔬 Simulación
 
-* Archivo LTspice: `simulaciones/zns.asc`
-* Análisis del circuito ZVS y comportamiento del sistema
+* [Archivo LTspice circuito ZVS](simulaciones/zvs.asc)
 
 ---
 
@@ -47,10 +46,6 @@ Toda la documentación detallada está organizada en la carpeta `docs/`:
 
 ### Tareas pendientes
 
-* [ ] Optimizar circuito ZVS
-* [ ] Medir salida del flyback
-* [ ] Diseñar etapas del generador de Marx
-* [ ] Implementar banco de capacitores
 
 ---
 
