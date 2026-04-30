@@ -10,8 +10,6 @@ flowchart LR
 A[Fuente 12V CC] --> B[Conmutación ZVS]
 B --> C[Transformación Flyback]
 C --> D[Rectificación HV]
-D --> E[Carga del Generador Marx]
-E --> F[Pulso de Salida ≈13kV]
 ```
 
 ---
