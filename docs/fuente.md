@@ -1,12 +1,12 @@
-# ⚡ Fuente de Alta Tensión para Generador de Marx (≈13 kV)
+#  Fuente de Alta Tensión para Generador de Marx (≈13 kV)
 
-## 📌 Descripción
+##  Descripción
 
 Este proyecto desarrolla una fuente de alta tensión basada en una entrada de 12 V CC, diseñada para alimentar un generador de Marx en etapas posteriores. El sistema convierte, eleva y rectifica la energía eléctrica hasta alcanzar niveles de kilovoltios.
 
 ---
 
-## 🧠 Arquitectura del sistema
+##  Arquitectura del sistema
 
 ```mermaid
 flowchart LR
@@ -18,9 +18,9 @@ D --> E[Salida HV]
 
 ---
 
-## ⚙️ Etapas del sistema
+##  Etapas del sistema
 
-### 🔋 1. Fuente primaria (12 V CC)
+###  Fuente primaria (12 V CC)
 
 | Parámetro             | Valor típico |
 | --------------------- | ------------ |
@@ -31,7 +31,7 @@ D --> E[Salida HV]
 
 ---
 
-### ⚡ 2. Conmutación ZVS
+###  Conmutación ZVS
 
 | Parámetro    | Valor típico    |
 | ------------ | --------------- |
@@ -47,7 +47,7 @@ D --> E[Salida HV]
 
 ---
 
-### 🔄 3. Transformador Flyback
+###  Transformador Flyback
 
 | Parámetro           | Descripción           |
 | ------------------- | --------------------- |
@@ -59,7 +59,7 @@ D --> E[Salida HV]
 
 ---
 
-### ⚙️ 4. Rectificación de Alta Tensión
+###  Rectificación de Alta Tensión
 
 | Elemento     | Función           |
 | ------------ | ----------------- |
@@ -76,7 +76,7 @@ D --> E[Salida HV]
 
 ---
 
-## 📤 Salida del sistema
+##  Salida del sistema
 
 | Parámetro        | Valor                  |
 | ---------------- | ---------------------- |
@@ -85,7 +85,7 @@ D --> E[Salida HV]
 
 ---
 
-## 🔬 Simulación
+##  Simulación
 
 * Archivo: `zns.asc`
 * Herramienta: LTspice
