@@ -91,25 +91,5 @@ D --> E[Salida HV]
 * Herramienta: LTspice
 * Análisis de la etapa ZVS y comportamiento del sistema
 
----
 
-## 📊 Estado del proyecto
 
-🟡 En desarrollo
-Actualmente en pruebas de la fuente de alta tensión.
-
----
-
-## 📂 Relación con el proyecto completo
-
-Esta fuente será utilizada para alimentar el generador de Marx, el cual permitirá generar pulsos de alta tensión en etapas futuras.
-
----
-
-## ⚠️ Seguridad
-
-El sistema maneja **alta tensión (kV)**, lo que representa un riesgo significativo:
-
-* No operar energizado sin protección
-* Usar aislamiento adecuado
-* Realizar pruebas en entornos controlados
