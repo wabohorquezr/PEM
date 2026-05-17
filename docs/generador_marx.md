@@ -1,38 +1,15 @@
 
 
-# 📁 `docs/generador_marx.md`
+# `docs/generador_marx.md`
 
 # Generador de Marx
 
 ## Descripción
 
-El generador de Marx es un circuito utilizado para generar pulsos de muy alta tensión a partir de una fuente de menor voltaje. Funciona mediante la carga en paralelo y descarga en serie de capacitores.
+El generador de Marx es un dispositivo generador de pulsos de alta potencia, que a diferencia de los bancos de condensadores clásicos funciona a su vez como amplificador de voltaje (Mirar [MOSFET](/docs/Components/MOSFET.md)). Diseñado por Erwin Otto Marx, ingeniero eléctrico que estudiaba la transmición de energía a largas distancias. Es uno de los dispositivos más usados para la generación de pulsos de alta potencia, aunque no es perfecto y cuenta con ciertas limitaciones.
 
-## Principio de funcionamiento
 
-1. Los capacitores se cargan en paralelo.
-2. Al activarse el sistema, se conectan en serie.
-3. Se genera un pulso de alta tensión en la salida.
 
-## Etapa de carga
+## Funcionamiento
 
-- Resistencias limitadoras de corriente  
-- Capacitores por etapa  
-- Fuente de alta tensión  
-
-## Etapa de descarga
-
-- Conmutación (chispa o switch)  
-- Descarga en serie  
-
-## Parámetros esperados
-
-| Parámetro | Valor |
-|---|---|
-| Voltaje de salida | ≈ 13 kV |
-| Tipo de señal | Pulso |
-| Duración | Corta |
-
-## Aplicación en el proyecto
-
-El generador de Marx será alimentado por la fuente de alta tensión desarrollada en este repositorio.
+El generador de Marx almacena la energía al igual que un banco de condensadores, la diferencia radica al momento de entregarla. Cuando el generador entrega la energía dispone todos los condensadores en una conexión en serie efectiva de manera repentina, amplificando de manera inmediata la tensión a la salida del generador (mirar [MOSFET](/docs/Components/MOSFET.md)). 

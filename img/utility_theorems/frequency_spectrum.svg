@@ -1,0 +1,92 @@
+<svg width="680" height="380" viewBox="0 0 680 380" role="img" xmlns="http://www.w3.org/2000/svg" style="background:transparent">
+  <title>Espectro de frecuencias de la señal cuadrada</title>
+  <desc>Espectro unilateral con deltas de Dirac en ω0, 3ω0, 5ω0, 7ω0. Amplitudes marcadas en el eje A con líneas punteadas horizontales.</desc>
+  <defs>
+    <marker id="arrowW" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Axes: origin at (120, 300) -->
+  <line x1="120" y1="20" x2="120" y2="320" stroke="white" stroke-width="1.3" marker-end="url(#arrowW)"/>
+  <line x1="100" y1="300" x2="650" y2="300" stroke="white" stroke-width="1.3" marker-end="url(#arrowW)"/>
+
+  <!-- Axis labels -->
+  <text x="112" y="15" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="15" font-style="italic" fill="white">A</text>
+  <text x="648" y="316" text-anchor="start" font-family="Georgia,'Times New Roman',serif" font-size="15" font-style="italic" fill="white">&#x3C9;</text>
+  <text x="112" y="317" text-anchor="end" font-family="Georgia,'Times New Roman',serif" font-size="13" fill="white">0</text>
+
+  <!-- Amplitudes (normalized to max height 230px):
+       n=1: 4V/π   → 230px  → y = 300-230 = 70
+       n=3: 4V/3π  → 76.7px → y = 300-77  = 223  (gap from n=1: 153px — fine)
+       n=5: 4V/5π  → 46px   → y = 300-46  = 254
+       n=7: 4V/7π  → 32.9px → y = 300-33  = 267
+
+       Problem: 254 and 267 are only 13px apart — labels still overlap.
+       Fix: spread x-axis more and use non-linear vertical spacing trick:
+       keep physics heights but enforce min 20px gap between label rows.
+       Adjusted y-positions for labels only (ticks stay at true heights):
+       n=1: y_tick=70,  label y=74
+       n=3: y_tick=223, label y=227
+       n=5: y_tick=254, label y=247  ← shift up 7px to create gap with n=7
+       n=7: y_tick=267, label y=271
+       Still too close (247 vs 271 = 24px gap, labels are ~14px tall so 10px clear — ok).
+
+       Actually let's just scale up: use 260px max height.
+       n=1: 260 → y=40
+       n=3: 86.7 → y=213
+       n=5: 52 → y=248
+       n=7: 37.1 → y=263
+       248 and 263: 15px — still tight for 12px font.
+
+       Best fix: use log-like manual spacing preserving order/ratio feel,
+       or simply spread the max height to 240 and enforce 22px min between labels:
+       true y: n=1=60, n=3=220, n=5=252, n=7=265
+       label positions: n=1=64, n=3=224, n=5=244 (shift up 8), n=7=268 (shift down 3)
+       gap between n=5 label (244) and n=7 label (268) = 24px — comfortable.
+  -->
+
+  <!-- x positions: w0=210, 3w0=330, 5w0=450, 7w0=570 -->
+
+  <!-- Horizontal dashed lines (at true amplitude heights) -->
+  <line x1="120" y1="60"  x2="210" y2="60"  stroke="white" stroke-width="0.9" stroke-dasharray="5 4" opacity="0.55"/>
+  <line x1="120" y1="220" x2="330" y2="220" stroke="white" stroke-width="0.9" stroke-dasharray="5 4" opacity="0.55"/>
+  <line x1="120" y1="252" x2="450" y2="252" stroke="white" stroke-width="0.9" stroke-dasharray="5 4" opacity="0.55"/>
+  <line x1="120" y1="265" x2="570" y2="265" stroke="white" stroke-width="0.9" stroke-dasharray="5 4" opacity="0.55"/>
+
+  <!-- Tick marks on A axis -->
+  <line x1="115" y1="60"  x2="125" y2="60"  stroke="white" stroke-width="1.2"/>
+  <line x1="115" y1="220" x2="125" y2="220" stroke="white" stroke-width="1.2"/>
+  <line x1="115" y1="252" x2="125" y2="252" stroke="white" stroke-width="1.2"/>
+  <line x1="115" y1="265" x2="125" y2="265" stroke="white" stroke-width="1.2"/>
+
+  <!-- Amplitude labels (nudged to avoid overlap) -->
+  <text x="112" y="64"  text-anchor="end" font-family="Georgia,'Times New Roman',serif" font-size="12" font-style="italic" fill="white">4V/&#x3C0;</text>
+  <text x="112" y="224" text-anchor="end" font-family="Georgia,'Times New Roman',serif" font-size="12" font-style="italic" fill="white">4V/3&#x3C0;</text>
+  <text x="112" y="246" text-anchor="end" font-family="Georgia,'Times New Roman',serif" font-size="12" font-style="italic" fill="white">4V/5&#x3C0;</text>
+  <text x="112" y="270" text-anchor="end" font-family="Georgia,'Times New Roman',serif" font-size="12" font-style="italic" fill="white">4V/7&#x3C0;</text>
+
+  <!-- n=1: ω0 -->
+  <line x1="199" y1="60"  x2="221" y2="60"  stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="210" y1="300" x2="210" y2="66" stroke="white" stroke-width="1.6" marker-end="url(#arrowW)"/>
+  <text x="202" y="318" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="white">&#x3C9;</text>
+  <text x="210" y="322" text-anchor="start" font-family="Georgia,'Times New Roman',serif" font-size="9" fill="white">0</text>
+
+  <!-- n=3: 3ω0 -->
+  <line x1="319" y1="220" x2="341" y2="220" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="330" y1="300" x2="330" y2="226" stroke="white" stroke-width="1.6" marker-end="url(#arrowW)"/>
+  <text x="320" y="318" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="white">3&#x3C9;</text>
+  <text x="330" y="322" text-anchor="start" font-family="Georgia,'Times New Roman',serif" font-size="9" fill="white">0</text>
+
+  <!-- n=5: 5ω0 -->
+  <line x1="439" y1="252" x2="461" y2="252" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="450" y1="300" x2="450" y2="258" stroke="white" stroke-width="1.6" marker-end="url(#arrowW)"/>
+  <text x="440" y="318" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="white">5&#x3C9;</text>
+  <text x="450" y="322" text-anchor="start" font-family="Georgia,'Times New Roman',serif" font-size="9" fill="white">0</text>
+
+  <!-- n=7: 7ω0 -->
+  <line x1="559" y1="265" x2="581" y2="265" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="570" y1="300" x2="570" y2="271" stroke="white" stroke-width="1.6" marker-end="url(#arrowW)"/>
+  <text x="560" y="318" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="white">7&#x3C9;</text>
+  <text x="570" y="322" text-anchor="start" font-family="Georgia,'Times New Roman',serif" font-size="9" fill="white">0</text>
+</svg>

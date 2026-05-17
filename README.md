@@ -1,11 +1,39 @@
-# PEM
+
+
+<h1 align="center">
+    <a href="#">
+    <img src="/img/pulse_power/logo temp.svg">
+    </a>
+</h1>
+
+<p align="center">
+  <i align="center">Proyecto de investigación enfocado en el diseño y construcción de pulsos electromagnéticos</i>
+</p>
+
+
+## Introducción
+
 Proyecto de investigación enfocado en el diseño y construcción de una fuente de alta tensión y un generador de Marx. Incluye simulación, implementación experimental, análisis eléctrico, control de costos y documentación continua para aplicaciones académicas en ingeniería eléctrica.
 
-# ⚡ Sistema de Generación de Pulsos de Alta Tensión (≈13 kV)
+<details open>
+<summary>
+ Features
+</summary> <br />
 
-## 📌 Descripción
+<p align="center">
+    <img width="49%" src="/img/readme/2d.png" alt="2d"/>
+&nbsp;
+    <img width="49%" src="/img/readme/3d.png" alt="3d"/>
+</p>
 
-Proyecto de investigación orientado al diseño y construcción de una fuente de alta tensión como etapa base para un generador de Marx. El sistema permite generar pulsos de alto voltaje mediante la conversión, elevación y almacenamiento de energía eléctrica.
+<p align="center">
+    <img width="49%" src="/img/readme/Soladadura 004.jpg" alt="sold"/>
+&nbsp;
+    <img width="49%" src="/img/readme/electro circuits.jpeg" alt="electro"/>
+</p> 
+    
+
+</details>
 
 ---
 
@@ -22,13 +50,20 @@ E --> F[Pulso ≈13kV]
 
 ---
 
-## 📂 Documentación técnica
+## Tabla de Contenidos
 
-Toda la documentación detallada está organizada en la carpeta `docs/`:
-
-* 🔌 [Fuente de alta tensión](docs/fuente.md)
-* ⚡ [Generador de Marx](docs/generador_marx.md)
-* 📘 [Fundamentos teóricos](docs/teoria.md)
+- **Documentación**
+  - **Componentes**
+    - [MOSFET.md](./docs/Components/MOSFET.md)
+  - **Matemáticas**
+    - [integration_theory.md](./docs/Mathematics/integration_theory.md)
+    - [utility_theorems.md](./docs/Mathematics/utility_theorems.md)
+  - **Física**
+    - [maxwell_eqs.md](./docs/Physics/maxwell_eqs.md)
+  - [fuente.md](./docs/fuente.md)
+  - [generador_marx.md](./docs/generador_marx.md)
+  - [Potencia Pulsada.md](./docs/Potencia%20Pulsada.md)
+  - [teoria.md](./docs/teoria.md)
 
 ---
 
@@ -53,11 +88,7 @@ Ver:
 ## 👥 Integrantes
 
 * William A. Bohorquez
-* (Agregar integrantes)
+* Electro Dinamix
 
 ---
 
-
-## 🚀 Estado del proyecto
-
-🟡 En desarrollo — etapa de fuente de alta tensión

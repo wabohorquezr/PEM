@@ -1,0 +1,47 @@
+<svg width="680" height="320" viewBox="0 0 680 320" role="img" xmlns="http://www.w3.org/2000/svg" style="background:transparent">
+  <title>Señal vs(t)</title>
+  <desc>Señal de voltaje arbitraria vs(t).</desc>
+  <defs>
+    <marker id="arrowW" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <line x1="70" y1="20" x2="70" y2="290" stroke="white" stroke-width="1.3" marker-end="url(#arrowW)"/>
+  <line x1="50" y1="180" x2="650" y2="180" stroke="white" stroke-width="1.3" marker-end="url(#arrowW)"/>
+
+  <text x="52" y="18" text-anchor="start" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="white">v</text>
+  <text x="61" y="22" text-anchor="start" font-family="Georgia,'Times New Roman',serif" font-size="9" fill="white">s</text>
+  <text x="66" y="18" text-anchor="start" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="white">(t)</text>
+  <text x="638" y="198" text-anchor="start" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="white">t</text>
+
+  <path
+    d="
+      M 70,180
+      C 78,177 88,162 100,145
+      C 110,130 118,112 132,95
+      C 142,82  155,64  167,52
+      C 176,44  185,48  196,63
+      C 204,73  210,85  220,75
+      C 230,65  238,42  250,38
+      C 260,34  268,50  276,68
+      C 284,87  289,118 298,148
+      C 306,172 310,188 318,210
+      C 327,235 338,262 355,272
+      C 366,278 376,274 388,265
+      C 400,255 410,242 422,232
+      C 432,223 440,208 448,192
+      C 455,178 460,162 470,148
+      C 480,133 492,118 505,112
+      C 516,107 524,113 534,122
+      C 543,130 548,118 558,112
+      C 568,106 578,115 588,128
+      C 600,144 612,162 628,172
+    "
+    fill="none"
+    stroke="white"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
