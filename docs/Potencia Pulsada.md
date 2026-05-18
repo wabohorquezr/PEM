@@ -6,9 +6,11 @@
 
 La potencia pulsada es un sistema donde la energía almacenada se descarga como energía eléctrica en una carga en un pulso o en una serie de ellos con una tasa de repetición controlada. Básicamente la potencia pulsada busca entregar la mayor cantidad de energía en el menor tiempo posible, y debido a que:
 
-$$P = \frac{dE(t)}{dt}$$
+```math
+P = \frac{dE(t)}{dt}
+```
 
-La potencia entregada a la carga resulta ser usualmente muy alta, rondando los valores de Gigavatios ( $10^9$ W).
+La potencia entregada a la carga resulta ser usualmente muy alta, rondando los valores de Gigavatios ( $`10^9`$ W).
 
 ## Fases de Generación
 
@@ -59,60 +61,86 @@ En general, un sistema de almacenamiento de condensadores tiene todos sus compon
 
 ![Circuito RC](/img/pulse_power/rc.png)
 
-En donde $V_0$ representa la tensión de la fuente que carga el sistema. Se puede observar que al cerrar el interruptor el circuito resultante es un circuito RC. Sabemos que la relación de tensión y corriente para un condensador es:
+En donde $`V_0`$ representa la tensión de la fuente que carga el sistema. Se puede observar que al cerrar el interruptor el circuito resultante es un circuito RC. Sabemos que la relación de tensión y corriente para un condensador es:
 
-$$i_c(t) = C\frac{d v_c(t)}{dt}$$
+```math
+i_c(t) = C\frac{d v_c(t)}{dt}
+```
 
 Por lo que al aplicar la ley de tensiones de Kirchoff (solo considerando el circuito RC) quedaría:
 
-$$ i\cdot R + \frac{1}{C} \int{i(t)\,dt} = 0$$
+```math
+i\cdot R + \frac{1}{C} \int{i(t)\,dt} = 0
+```
 
 Al aplicar el operador lineal "derivada" a ambos de la ecuación quedaría:
 
-$$ R\cdot \frac{d i(t)}{dt} + \frac{1}{C}\cdot i(t) = 0$$
+```math
+R\cdot \frac{d i(t)}{dt} + \frac{1}{C}\cdot i(t) = 0
+```
 
 Manipulando para conseguir un ecuación "mónica":
 
-$$ \frac{d i(t)}{dt} + \frac{1}{RC}\cdot i(t) = 0$$
+```math
+\frac{d i(t)}{dt} + \frac{1}{RC}\cdot i(t) = 0
+```
 
 Es sencillo ver que las soluciones a esta ecuación diferencial son de la forma:
 
-$$ i(t) = K\cdot e^{-\frac{t}{RC}}$$
+```math
+i(t) = K\cdot e^{-\frac{t}{RC}}
+```
 
 Si lo que nos interesa es la tensión en la resistencia simplemente multiplicamos la corriente por el valor de tensión:
 
-$$ V_R(t) = K_2 \cdot e^{-\frac{t}{RC}}$$
+```math
+V_R(t) = K_2 \cdot e^{-\frac{t}{RC}}
+```
 
 Para hallar la constante podemos observar que el condensador quedo cargado a la tensión de la fuente $V_0$, por lo que no es difícil ver que:
 
-$$ V_R(t) = V_0 \cdot e^{-\frac{t}{RC}}$$
+```math
+ V_R(t) = V_0 \cdot e^{-\frac{t}{RC}}
+```
 
-Al producto $R\cdot C$ lo denominaremos con el símbolo $\tau$ (tau), y lo llamaremos tiempo de extinción. Si estuvieramos interesados en hallar el FWHM sencillamente debemos considerar el tiempo que se demora a llegar a la mitad de tensión, es decir:
+Al producto $`R\cdot C`$ lo denominaremos con el símbolo $`\tau`$ (tau), y lo llamaremos tiempo de extinción. Si estuvieramos interesados en hallar el FWHM sencillamente debemos considerar el tiempo que se demora a llegar a la mitad de tensión, es decir:
 
-$$ V_R(t_{fwhm}) = \frac{V_0}{2}$$
+```math
+ V_R(t_{fwhm}) = \frac{V_0}{2}
+```
 
 Para ello observemos que para que esto ocurra se debe cumplir que:
 
-$$ e^{-\frac{t_{fwhm}}{\tau}} = 0.5$$
+```math
+e^{-\frac{t_{fwhm}}{\tau}} = 0.5
+```
 
 Despejando $t_{fwhm}$:
 
-$$ t_{fwhm} = \ln{2}\cdot \tau $$
+```math
+ t_{fwhm} = \ln{2}\cdot \tau
+ ```
 
 
 ## Inducción Electromagnética
 
 Sabemos gracias a la Ley de Amperé-Maxwell (Leer [Ecuaciones de Maxwell](/docs/Physics/maxwell_eqs.md)) que una corriente que circula por un cable genera un campo magnético alrededor. El flujo de este campo magnético se define como:
 
-$$ \Phi_B = \iint_R\vec{B}\cdot d\vec{A} $$
+```math
+\Phi_B = \iint_R\vec{B}\cdot d\vec{A}
+```
 
 O en notación feyniana (Leer [Teoría de la Integración](/docs/Mathematics/integration_theory.md)):
 
-$$ \Phi_B = \iint_R\mathbb{B}\cdot d\mathbb{A} $$
+```math
+ \Phi_B = \iint_R\mathbb{B}\cdot d\mathbb{A}
+ ```
 
 La inductancia se define como la medida de la oposición al cambio de la corriente. Aunque es un término comúnmente asociado a inductores o bobinas, esta oposición está siempre presente en los conductores cuya corriente varía con el tiempo. Al variar la corriente, se produce un cambio en el campo magnético alrededor del conductor que, de acuerdo con la Ley de Faraday, induce una tensión en el propio circuito. Si bien estos efectos de autoinductancia no suelen ser apreciables en circuitos de baja corriente y baja frecuencia, se manifiestan con mayor intensidad en las líneas de transmisión. La inductancia matemáticamente se escribe como:
 
-$$ L = \frac{\Phi_B}{i} $$
+```math
+L = \frac{\Phi_B}{i}
+```
 
 Este efecto es indeseable debido a que la inductancia no permite los cambios bruscos de corriente, y como veremos más adelante, la inductancia esta relacionada con el tiempo de subida.
 
@@ -129,41 +157,61 @@ El modelo RC es una pequeña aproximación al sistema de alta potencia, sin emba
 
 $C$ representa la la capacitancia efectiva del banco de condensadores, mientras que $L$ representa los efectos inductivos debido a las corrientes que circulan por los cables. Cuando se cierra el interruptor resulta en un circuito RLC serie, cuya ecuación (obtenida de la Ley de Tensiones de Kirchoff) es:
 
-$$\frac{1}{C} \cdot \int{i(t)\>dt} + L\cdot \frac{d i(t)}{dt} + i(t)R = 0$$
+```math
+\frac{1}{C} \cdot \int{i(t)\>dt} + L\cdot \frac{d i(t)}{dt} + i(t)R = 0
+```
 
 El lector o lectora (agregado de último momento, perdóname Gabriela) podrá notar que usamos la relación integral del condensador. Por su parte la ecuación que usamos para el inductor es la definición del comportamiento de este circuito dinámico, la cual es:
 
-$$v(t) = L\cdot \frac{d i(t)}{dt}$$
+```math
+v(t) = L\cdot \frac{d i(t)}{dt}
+```
 
 Aplicando el operador lineal "derivada" en la ecuación de malla resulta en:
 
-$$\frac{1}{C}\cdot i(t) + L\cdot \frac{d^2 i(t)}{dt^2} + \frac{di(t)}{dt}R = 0$$
+```math
+\frac{1}{C}\cdot i(t) + L\cdot \frac{d^2 i(t)}{dt^2} + \frac{di(t)}{dt}R = 0
+```
 
 Convirtiendo la ecuación en "mónica" y reorganizando:
 
-$$ \frac{d^2 i(t)}{dt^2} + \frac{R}{L}\cdot\frac{di(t)}{dt} + \frac{1}{LC}\cdot i(t)= 0$$
+```math
+\frac{d^2 i(t)}{dt^2} + \frac{R}{L}\cdot\frac{di(t)}{dt} + \frac{1}{LC}\cdot i(t)= 0
+```
 
 Como se puede observar esta es una ecuación de segundo orden de coeficientes constantes, cuya ecuación característica es:
 
-$$r^2 + \frac{R}{L}\cdot r + \frac{1}{LC} = 0$$
+```math
+r^2 + \frac{R}{L}\cdot r + \frac{1}{LC} = 0
+```
 
 Aplicando el capricho del diablo a dicha ecuación:
 
-$$r_{1,2} = \frac{-\frac{R}{L} \pm \sqrt{\left(\frac{R}{L}\right)^2-4\left(\frac{1}{LC}\right)}}{2}$$
+```math
+r_{1,2} = \frac{-\frac{R}{L} \pm \sqrt{\left(\frac{R}{L}\right)^2-4\left(\frac{1}{LC}\right)}}{2}
+```
 
 Realizando una pequeña manipulación llegamos a:
 
-$$r_{1,2} = -\frac{R}{2L} \pm \sqrt{\left(\frac{R}{2L}\right)^2-\frac{1}{LC}}$$
+```math
+r_{1,2} = -\frac{R}{2L} \pm \sqrt{\left(\frac{R}{2L}\right)^2-\frac{1}{LC}}
+```
 
-Definiremos $\omega_0$ y $\alpha$ como:
+Definiremos $`\omega_0`$ y $`\alpha`$ como:
 
-$$\omega_0 = \frac{1}{\sqrt{LC}}$$
+```math
+\omega_0 = \frac{1}{\sqrt{LC}}
+```
 
-$$\alpha = \frac{R}{2L}$$
+```math
+\alpha = \frac{R}{2L}
+```
 
 De tal forma que las soluciones quedarían:
 
-$$r_{1,2} = -\alpha \pm \sqrt{\alpha^2-\omega^2}$$
+```math
+r_{1,2} = -\alpha \pm \sqrt{\alpha^2-\omega^2}
+```
 
 Dependiendo del resultado dentro de la raices podremos tener dos casos, realmente son tres pero el caso criticamente amortiguado no se tendrá en cuenta.
 
