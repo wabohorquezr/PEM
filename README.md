@@ -2,7 +2,7 @@
 
 <h1 align="center">
     <a href="#">
-    <img src="/img/readme/LOGO_PEM.jpg">
+    <img src="/img/pulse_power/logo_temp.jpg">
     </a>
 </h1>
 
