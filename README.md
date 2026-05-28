@@ -88,7 +88,9 @@ Ver:
 ## 👥 Integrantes
 
 * William A. Bohorquez
-* Electro Dinamix
-
+* Kevin A. Buitrago
+* Diego L. Mahecha
+* Heidy G. Morales
+* Jorge A. Torres
 ---
 
