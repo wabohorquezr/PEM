@@ -2,7 +2,7 @@
 
 <h1 align="center">
     <a href="#">
-    <img src="/img/pulse_power/logo_temp.svg">
+    <img src="/img/pulse_power/logo temp.svg">
     </a>
 </h1>
 
