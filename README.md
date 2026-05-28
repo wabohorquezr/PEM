@@ -2,7 +2,7 @@
 
 <h1 align="center">
     <a href="#">
-    <img width="10%" src="/img/pulse_power/P.E.M. Original Logo 4K.jpg"/>
+    <img width="50%" src="/img/pulse_power/P.E.M. Original Logo 4K.jpg"/>
     </a>
 </h1>
 
