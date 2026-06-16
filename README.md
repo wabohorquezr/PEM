@@ -54,15 +54,21 @@ E --> F[Pulso ≈13kV]
 
 - **Documentación**
   - **Componentes**
-    - [MOSFET.md](./docs/Components/MOSFET.md)
+    - [MOSFET (Incompleto  :'(   )](./docs/Components/MOSFET.md)
   - **Matemáticas**
-    - [integration_theory.md](./docs/Mathematics/integration_theory.md)
-    - [utility_theorems.md](./docs/Mathematics/utility_theorems.md)
+    - [Matemática Avanzada](./docs/Mathematics/advanced_math.md)
+    - [Teoría de la Integración](./docs/Mathematics/integration_theory.md)
+    - [Teoremas de Utilidad](./docs/Mathematics/utility_theorems.md)
+    - [Teoría de la Vectorización](./docs/Mathematics/vector_theory.md)
   - **Física**
-    - [maxwell_eqs.md](./docs/Physics/maxwell_eqs.md)
+    - [Ecuaciones de Maxwell](./docs/Physics/maxwell_eqs.md)
+  - **Electrónica de Potencia**
+    - [Conversión CC-CC](./docs/Power%20Electronic/Regulation/CC%20-%20CC.md)
+    - **Zero Voltage Switching**
+      - [Introducción al ZVS](./docs/Power%20Electronic/Zero%20Voltage%20Conmutation/Introduction.md)
   - [fuente.md](./docs/fuente.md)
   - [generador_marx.md](./docs/generador_marx.md)
-  - [Potencia Pulsada.md](./docs/Potencia%20Pulsada.md)
+  - [Potencia Pulsada](./docs/Potencia%20Pulsada.md)
   - [teoria.md](./docs/teoria.md)
 
 ---
@@ -80,6 +86,7 @@ E --> F[Pulso ≈13kV]
 ## 📚 Bibliografía
 
 Ver:
+Esto no es bibliografia, ni siquiera existe el archivo, me voy a quejar con el admin
 
 📄 `referencias/bibliografia.md`
 
@@ -88,7 +95,6 @@ Ver:
 ## 👥 Integrantes
 
 * William A. Bohorquez
-* Kevin A. Buitrago
 * Diego L. Mahecha
 * Heidy G. Morales
 * Jorge A. Torres
