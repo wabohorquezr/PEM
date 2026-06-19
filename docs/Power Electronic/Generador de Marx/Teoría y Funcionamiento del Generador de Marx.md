@@ -72,13 +72,3 @@ $$R_L = \frac{t \cdot 0.02}{C_0 \cdot n^2} = \frac{1\text{ s} \cdot 0.02}{(2 \ti
     $$I_{max} \approx \frac{U_0}{(L/C)^{1/2} + 0.8 R}$$
 *   **Tiempo de Erección:** El proceso completo de conexión en serie ocurre normalmente en el orden de un **microsegundo** [1].
 
-##  Selección de Materiales Dieléctricos
-
-El aislamiento de los componentes debe superar la rigidez dieléctrica estática ($E_{DB}$) del material para evitar fallas [7]:
-
-| Material | Rigidez Dieléctrica ($E_{DB}$) [kV/cm] |
-| :--- | :---: |
-| **Mylar** | 400 |
-| **Aceite de transformador** | 400 |
-| **Polipropileno** | 256 |
-| **Plexiglás** | 200 |
