@@ -11,8 +11,9 @@ El generador opera bajo el principio de **carga en paralelo y descarga en serie*
 
 ##  Ecuaciones de Diseño y Operación
 
-### A. Tensión de Salida
+### Tensión de Salida
 En un generador ideal de $n$ etapas, la tensión máxima de salida ($U_{out}$) es:
+
 $$U_{out} = n \cdot U_0$$
 
 ###  Tiempo de Carga entre Etapas
