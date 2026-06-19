@@ -17,9 +17,11 @@ $$U_{out} = n \cdot U_0$$
 
 ###  Tiempo de Carga entre Etapas
 Debido a la conexión resistiva, cada etapa se carga a una velocidad distinta. La constante de tiempo para la etapa $n$ es [2]:
+
 $$\tau_n = R_L \cdot C_0 \cdot n^2$$
 
 La diferencia de tensión ($\Delta U_0$) entre la primera y la última etapa tras un tiempo $t$ se calcula como [3]:
+
 $$\frac{\Delta U_0}{U_0} = \frac{R_L \cdot C_0 \cdot n^2}{t}$$
 
 ###  Sobretensión en los Gaps (Erección)
