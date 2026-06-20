@@ -51,9 +51,24 @@ Consideremos el circuito de la Figura 3, a simple vista parece complicado pero v
 <sup>5</sup><small> El modelo original del oscilador astable usa transistores BJT los cuales permiten flujos de corriente por el terminal de Base prescindiendo así de las resistencias $R_5$ y $`R_6`$</small>
 
 ### Conmutación a Cero Voltios
-En este punto el lector o lectora estará en duda del por qué presente las dos configuraciones anteriores. Resulta que el ZVS es una modificación de un oscilador astable. El diseño más común que se puede encontrar sobre este circuito es el diseñado por Mazilli.
+En este punto el lector o lectora estará en duda del por qué presente las dos configuraciones anteriores. Resulta que el ZVS es una modificación de un oscilador astable. El diseño más común que se puede encontrar sobre este circuito es el diseñado por Vladimiro Mazzilli, cuyo diseño se ilustra en la Figura 5.
+
+![Circuito ZVS](/img/power_electronic/ZVS%20Circuit.png)
+<br> Figura 5. Circuito ZVS.
+
+
+Empecemos con el análisis. Pareciera que es diferente al circuito astable que presentamos anteriormente, pero funciona de manera parecida. El circuito posee dos estados los cuales son inestables. Ya no me acuerdo que sigue, me dedique tanto a MOSFET que ya me duele la cabeza, después sigo. Dejo una simulación de bajo presupuesto.
+
+![Circuito ZVS](/img/Flip%20Flop/Mazilli%20animated.gif)
+<br> Figura 6. Circuito ZVS Animado.
+
+
+
+La primera pregunta sería ¿Cuál es la necesidad de conmutar a cero voltios? La respuesta es por eficiencia. En el circuito astable anterior observamos que un transistor pasaba de conducir a estar bloqueado en muy poco tiempo, esto genera una disipación de energía en forma de calor, que a altas frecuencias podría llegar a dañar el circuito.
 
 ## Referencias
 [1] El texas https://www.ti.com/lit/an/slua159/slua159.pdf?ts=1781501340035
+
 [2] https://es.wikipedia.org/wiki/Biestable
+
 [3] https://es.wikipedia.org/wiki/Astable

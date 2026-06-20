@@ -54,7 +54,13 @@ E --> F[Pulso ≈13kV]
 
 - **Documentación**
   - **Componentes**
-    - [MOSFET (Incompleto  :'(   )](./docs/Components/MOSFET.md)
+    - **MOSFET**-
+      - [Introducción (En proceso  :) yei)](./docs/Components/MOSFET/Introduction.md)
+      - [Polarización (Sin iniciar  :'( )](./docs/Components/MOSFET/polarize.md)
+      - [Comportamiento en AC (Sin iniciar  :'( )](./docs/Components/MOSFET/ac.md)
+    - [Circuito Oscilador 555](./docs/Components/555.md)
+  - **Electrónica**
+    - [Flip Flop](./docs/Electronic/Flip%20Flop.md)
   - **Matemáticas**
     - [Matemática Avanzada](./docs/Mathematics/advanced_math.md)
     - [Teoría de la Integración](./docs/Mathematics/integration_theory.md)
@@ -62,6 +68,7 @@ E --> F[Pulso ≈13kV]
     - [Teoría de la Vectorización](./docs/Mathematics/vector_theory.md)
   - **Física**
     - [Ecuaciones de Maxwell](./docs/Physics/maxwell_eqs.md)
+    - [Semiconductores](./docs/Physics/semiconductors.md)
   - **Electrónica de Potencia**
     - [Conversión CC-CC](./docs/Power%20Electronic/Regulation/CC%20-%20CC.md)
     - **Zero Voltage Switching**
