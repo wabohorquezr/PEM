@@ -26,7 +26,8 @@ La diferencia de tensión ($\Delta U_0$) entre la primera y la última etapa tra
 $$\frac{\Delta U_0}{U_0} = \frac{R_L \cdot C_0 \cdot n^2}{t}$$
 
 ###  Sobretensión en los Gaps (Erección)
-Para garantizar que todos los interruptores se cierren, es necesaria una sobretensión ($\Delta U$). Considerando la capacitancia de la brecha ($C_g$) y la parásita a tierra ($C_s$), la tensión en el segundo gap es [4]:
+Para garantizar que todos los interruptores se cierren, es necesaria una sobretensión ($\Delta U$). Considerando la capacitancia de la brecha ($C_g$) y la parásita a tierra ($C_s$), la tensión en el segundo gap es :
+
 $$\Delta U = \frac{2U_0}{1 + C_g / C_s}$$
 
 Si se disparan simultáneamente las primeras $k$ etapas, la sobretensión en la etapa $k+1$ es [4]:
@@ -43,7 +44,7 @@ $$\Delta U = k \cdot U_0 \frac{2}{1 + \sqrt{1 + 4 C_g / C_s}}$$
 
 Este documento detalla el diseño y los cálculos fundamentales para un **Generador de Marx** configurado para una salida de alta tensión, optimizado para producir arcos eléctricos funcionales.
 
-## 1. Parámetros de las Etapas y Tensión de Carga
+## Parámetros de las Etapas y Tensión de Carga
 
 El principio fundamental de este generador, patentado por Erwin Marx en 1923, consiste en cargar capacitores en paralelo para luego conmutarlos a una configuración en serie durante la descarga [1].
 
@@ -53,7 +54,7 @@ El principio fundamental de este generador, patentado por Erwin Marx en 1923, co
 *   **Cálculo del voltaje de carga ($U_0$):**
     $$U_0 = \frac{U_{out}}{n} = \frac{20\text{ kV}}{4} = \mathbf{5\text{ kV}}$$
 
-Cada capacitor debe cargarse a un potencial de **5 kV** mientras los interruptores permanecen abiertos [1].
+Cada capacitor debe cargarse a un potencial de **5 kV** mientras los interruptores permanecen abiertos.
 
 ##  Cálculo de las Resistencias de Carga ($R_L$)
 
@@ -61,7 +62,7 @@ Debido a que los capacitores se cargan a través de una cadena serie de resisten
 $$\tau_n = R_L C_0 n^2$$
 
 ### Determinación del valor óhmico para 1 Hz
-Para una operación repetitiva estable (aprox. 1 disparo por segundo), calculamos el valor de $R_L$ asumiendo una diferencia de tensión tolerable ($\Delta U_0/U_0$) del **2% (0.02)** entre el primer y el último capacitor [3]:
+Para una operación repetitiva estable (aprox. 1 disparo por segundo), calculamos el valor de $R_L$ asumiendo una diferencia de tensión tolerable ($\Delta U_0/U_0$) del **2% (0.02)** entre el primer y el último capacitor :
 
 $$R_L = \frac{t \cdot 0.02}{C_0 \cdot n^2} = \frac{1\text{ s} \cdot 0.02}{(2 \times 10^{-9}\text{ F}) \cdot 16} = \mathbf{625\text{ k}\Omega}$$
 
