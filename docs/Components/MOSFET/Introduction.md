@@ -32,7 +32,7 @@ Con cero voltios en la terminal de compuerta (Gate en inglés) el transistor se 
 ![Estructura](/img/MOSFET/back_to_back.png)
 <br>**Fig. 3.** Modelo Equivalente - Diodos Espalda con Espalda
 
-## Creación de un Canal
+### Creación de un Canal
 
 Consideremos la situación presentada en la Figura 4, en este caso se ha conectado los terminales D y S a tierra y se ha aplicado una tensión al terminal G<sup>1</sup>. Dado que el terminal de Source está conectada a tierra, la tensión de compuerta aparece entre la compuerta y la fuente (el Source) y, por lo tanto, lo denotamos como $`v_{GS}`$. Al aplicar esta tensión estamos generando que las cargas positivas del Body cercanas al aislante sean repelidas hacia el fondo del sustrato, debido a que la tensión es positiva y asumimos que por lo tanto hay cargas positivas en el contacto de metal. La región de deplexión que vemos en la Figura 4 está ocupada por la carga negativa ligada asociada a los átomos aceptores del sustrato. Estas cargas quedan “descubiertas” porque las cargas positivas (o huecos) se han desplazado hacia abajo, hacia el sustrato. Además, la tensión positiva de la compuerta atrae electrones desde las regiones de fuente y drenaje (donde se encuentran en abundancia) hacia la región del canal. Cuando se acumula una cantidad suficiente de electrones cerca de la superficie del sustrato bajo la compuerta, se crea una región n, que conecta las regiones de fuente y drenaje, como se muestra en la Figura 4. 
 
@@ -86,9 +86,58 @@ v_{DS} < v_{GS} - v_{GS(th)}
 
 A esos valores de tensión $`v_{DS}`$ se les considerará pequeños.
 
-### ¿Qué pasa si me paso?
+### ¿Qué pasa si me paso? - Zona de Saturación
 
-Surge la pregunta: "*¿Y si decido aumentar la tensión $`v_{DS}`$ por encima de la condición? ¿Acaso se quemará mi querido transistor que con tanto esfuerzo estoy intentando aprender?*", y no mi querido lector o lectora, ya te explico que pasa. Lo primero es saludar, buenos días. jajajaaj. No ya enserio, esta parte la escribiré después debido a que ya llevo resto y me siento cansado.
+Surge la pregunta: "*¿Y si decido aumentar la tensión $`v_{DS}`$ por encima de la condición? ¿Acaso se quemará mi querido transistor que con tanto esfuerzo estoy intentando aprender?*", y no mi querido lector o lectora, ya te explico que pasa. Primero, consideremos una tensión $`v_{GS}`$ por encima del umbral, esto provoca la creación de un canal cuyo ancho es directamente proporcional a la diferencia de potencial. Lo que sucede es que, al crear una diferencia de potencial $v_{DS}$, inconscientemente estamos modificando la tensión en cada punto del canal; por lo tanto, el ancho también se ve modificado. En los puntos más cercanos a Source, la diferencia de potencial será exactamente $v_{GS}$; sin embargo, en los puntos más cercanos a Drain, la tensión será $`v_{GS} - v_{DS}`$, debido a que estas tensiones se contradicen al aplicar Kirchhoff. Por lo que, al ir aumentando la tensión $v_{DS}$, este canal va volviéndose más estrecho en la parte de Drain. Veamos esto en la Figura 6. En esta figura podemos observar que el ancho del canal en la parte de Source es proporcional a la tensión $V_{OV}$ (*overdrive voltage*), mientras que en la parte de Drain es proporcional a $V_{OV} - v_{DS}$. Esta relación de proporcionalidad viene de un análisis un poco más complejo que por brevedad no será explicado, pero que el lector o lectora podrá consultar en [1].
+
+![Ensanchamiento del canal](/img/MOSFET/Anchura%20del%20Canal.png)
+<br>**Fig. 6.** Estrechamiento del Canal, Adaptado de [1]
+
+Nótese que para que exista un ancho en la parte de Drain la tensión $`v_{DS}`$ debe ser menor al *overdrive voltage*, el cual se define como $`v_{GS} - v_{GS(th)}`$ ¡De aquí viene nuestra relación de pequeño $v_{DS}$! Y diras *"Ya entiendo lo que me quieres decir con el canal, pero ¿Qué sucede realmente si me llego a pasar? ¿Frenaré el flujo de corriente haciendo inservible mi pobre transistor que tanto está sufriendo?"*. Consideremos primero el caso en que $`v_{DS} = v_{GS} - v_{GS(th)}`$ el cual se presenta en la Figura 7. En este caso el ancho del canal en el terminal de Drain es cero y a esto se le llama **pinch-off** o estrangulamiento del canal.  Aumentar $`v_{DS}`$ más allá de este valor (es decir, $`v_{DS} > v_{GS} - v_{GS(th)}`$) no afecta a la forma ni a la carga del canal, y la corriente que lo atraviesa permanece constante en el valor alcanzado cuando  $`v_{DS} = V_{OV}`$. Es decir la corriente se **satura**, no puede aumentar más por mucho que aumentemos la tensión. 
+
+
+![Estrangulamiento del canal](/img/MOSFET/pinch%20off.png)
+<br>**Fig. 7.** Estrangulamiento del Canal, Adaptado de [1]
+
+Cuando la condición $`v_{DS} \geq v_{GS} - v_{GS(th)}`$ se cumple se dice que el transistor está tranbajando en *"zona de saturación"*. La ecuación que describe el comportamiento en esta zona es la siguiente:
+
+```math
+i_d = \frac{1}{2}k_n\cdot \left(v_{GS} - v_{GS(th)}\right)^2
+```
+
+Para mayor comodidad vamos a definir una nueva constante $`k`$ tal que:
+
+```math
+k = \frac{1}{2}k_n = \frac{1}{2}(\mu_n C_{ox}) \left(\frac{W}{L}\right)
+```
+
+Por lo que nuestra relación quedaría:
+
+```math
+i_d = k\cdot \left(v_{GS} - v_{GS(th)}\right)^2
+```
+
+Podemos observar que la corriente ahora solo depende únicamente de la tensión aplicada a la compuerta y no la tensión $`v_{DS}`$. Esta relación también plantea un comportamiento no lineal entre la corriente y la tensión.
+
+## Curvas del MOSFET
+
+Una vez explicado los funcionamientos básicos viene bien resumirlos en una gráfica que relacione el comportamiento de la corriente $`i_d`$ vs la tensión $`v_{DS}`$ con la suposición de que la tensión $`v_{GS}`$ superó el umbral. Esta gráfica se presenta en la Figura 8. En esta gráfica podemos ver que cuando $`v_{DS}`$ no ha superado la *overdrive voltage* (el $`v_{GS} - v_{GS(th)}`$) la curva presenta un comportamiento mayoritariamente lineal cerca del cero, con una pequeña curvatura cerca del límite de esta condición. Una vez superado la *overdrive voltage*<sup>1</sup> la relación entre tensión y corriente se vuelve una constante, es decir, que sin importar el valor de tensión la corriente permanece constante.
+
+![Curva General del MOSFET](/img/MOSFET/Curva%20General%20del%20MOSFET.png)
+<br>**Fig. 8.** Curva $`i_d`$ vs $`v_{DS}`$, Adaptado de [1]
+
+### _____________________________________________
+<sup>1</sup><small> Me niego a llamarle tensión de sobrecarga.</small><br>
+
+
+## Modelo Circuital
+
+Después de toda esa presentación del funcionamiento el lector o lectora se podría preguntar. *"Oye, ¿Cada vez que quiera análizar un circuito con un NMOS debo dibujar esa caja toda grande?"* y no, existe un símbolo que representa este dispositivo, sin embargo, no es universal, difiere tanto del autor como del simulador de circuitos. Pero no te preocupes lector o lectora, te mostraré los dos modelos más utilizados para representar el NMOS.
+
+## ¿Qué pasa si pienso al revés? - PMOS
+
+Un lector o lectora curios@ podría pensar *"Oye, me presentaste una configuración donde el canal era tipo n y todo era muy bonito, ¿Qué pasaría si yo quiero ser hambrient@ de poder y quiero un canal tipo p?"* Y yo te diría mi querido lector o lectora que tienes una curiosidad invaluable y una pregunta muy genuina, por eso te voy a explicar ahora qué es el *MOSFET de canal p* o *PMOS*.
+
 
 
 
