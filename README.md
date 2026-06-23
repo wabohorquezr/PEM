@@ -57,7 +57,7 @@ E --> F[Pulso ≈13kV]
     - **MOSFET**-
       - [Introducción (En proceso  :) yei)](./docs/Components/MOSFET/Introduction.md)
       - [Polarización](./docs/Components/MOSFET/polarize.md)
-      - [Comportamiento en AC (Sin iniciar  :'( )](./docs/Components/MOSFET/ac.md)
+      - [Comportamiento en AC (En proceso)](./docs/Components/MOSFET/ac.md)
     - [Circuito Oscilador 555](./docs/Components/555.md)
   - **Electrónica**
     - [Flip Flop](./docs/Electronic/Flip%20Flop.md)
