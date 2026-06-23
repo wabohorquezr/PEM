@@ -11,7 +11,7 @@ La respuesta es la **polarización**.
 
 Polarizar un transistor consiste en fijar las tensiones y corrientes de corriente continua (DC) de tal manera que el dispositivo opere en un punto específico llamado **Punto de Operación** o **Punto Q (Quiescent Point)**.
 
-En aplicaciones de conmutación normalmente interesa que el transistor esté completamente apagado o completamente encendido. Sin embargo, en amplificadores la situación cambia completamente: el MOSFET debe permanecer en la **región de saturación**, pues únicamente allí la corriente depende principalmente de la tensión de compuerta.
+En aplicaciones de conmutación normalmente interesa que el transistor esté completamente apagado o completamente encendido. Sin embargo, en amplificadores la situación cambia completamente: el MOSFET debe permanecer en la **región de saturación**, pues únicamente allí la corriente depende principalmente de la tensión de gate.
 
 ---
 
@@ -21,9 +21,9 @@ El punto Q representa los valores de corriente y tensión cuando no existe seña
 
 Generalmente está definido por:
 
-- Corriente de drenador: `I_D`
-- Tensión drenador-fuente: `V_DS`
-- Tensión compuerta-fuente: `V_GS`
+- Corriente de drain: `I_D`
+- Tensión drain-source: `V_DS`
+- Tensión gate-source: `V_GS`
 
 La señal de entrada hará oscilar al transistor alrededor de este punto.
 
@@ -164,7 +164,7 @@ Este circuito es muchísimo más estable que la polarización fija.
 
 Es probablemente la configuración más utilizada en amplificadores discretos.
 
-La tensión de compuerta se fija mediante dos resistencias.
+La tensión de gate se fija mediante dos resistencias.
 
 ```math
 V_G=V_{DD}\frac{R_2}{R_1+R_2}
