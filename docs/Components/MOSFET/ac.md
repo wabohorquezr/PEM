@@ -80,7 +80,7 @@ Debido a la modulación de longitud de canal, el MOSFET presenta una resistencia
 r_o=\frac{1}{\lambda I_D}
 ```
 
-Si λ≈0 entonces
+Si `\lambda`≈0 entonces
 
 ```math
 r_o\rightarrow\infty
@@ -88,9 +88,9 @@ r_o\rightarrow\infty
 
 ---
 
-# Modelo \pi (Pi)
+# Modelo `\pi` (Pi)
 
-El modelo \pi es el modelo de pequeña señal más utilizado para analizar amplificadores MOSFET.
+El modelo `\pi` es el modelo de pequeña señal más utilizado para analizar amplificadores MOSFET.
 
 Está conformado por:
 
@@ -108,7 +108,7 @@ i_d=g_mv_{gs}
 r_o=\frac{1}{\lambda I_D}
 ```
 
-Cuando \lambda puede despreciarse, el modelo \pi se simplifica eliminando `r_o`.
+Cuando `\lambda` puede despreciarse, el modelo \pi se simplifica eliminando `r_o`.
 
 ---
 
