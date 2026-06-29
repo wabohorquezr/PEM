@@ -73,16 +73,27 @@ E --> F[Pulso ≈13kV]
     - [Conversión CC-CC](./docs/Power%20Electronic/Regulation/CC%20-%20CC.md)
     - **Zero Voltage Switching**
       - [Introducción al ZVS](./docs/Power%20Electronic/Zero%20Voltage%20Conmutation/Introduction.md)
-  - [fuente.md](./docs/fuente.md)
-  - [generador_marx.md](./docs/generador_marx.md)
-  - [Potencia Pulsada](./docs/Potencia%20Pulsada.md)
-  - [teoria.md](./docs/teoria.md)
+  
+  - **Simulaciones**
+   - [Conmutación Tradicional](./docs/Simulations/traditional_conmutation.md)
 
 ---
 
 ## 🔬 Simulación
+Disponibles en la carpeta [./sim](./sim/), con la siguiente Tabla de Contenidos:
 
-* [Archivo LTspice circuito ZVS](simulaciones/zvs.asc)
+- **sim**
+  - **img**
+  - **models**
+    - [IRF640.model](./sim/models/IRF640.model)
+  - **schematics**
+    - **Conmutation**
+      - **555**
+        - [Flyback 555.asc](./sim/schematics/Conmutation/555/Flyback%20555.asc)
+        - [Flyback 555.sch](./sim/schematics/Conmutation/555/Flyback%20555.sch)
+        - [Flyback 555.txt](./sim/schematics/Conmutation/555/Flyback%20555.txt)
+      - **Traditional**
+    - [zvs.asc](./sim/schematics/zvs.asc)
 
 ---
 

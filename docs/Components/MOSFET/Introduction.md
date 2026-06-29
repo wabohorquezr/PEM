@@ -132,7 +132,16 @@ Una vez explicado los funcionamientos básicos viene bien resumirlos en una grá
 
 ## Modelo Circuital
 
-Después de toda esa presentación del funcionamiento el lector o lectora se podría preguntar. *"Oye, ¿Cada vez que quiera análizar un circuito con un NMOS debo dibujar esa caja toda grande?"* y no, existe un símbolo que representa este dispositivo, sin embargo, no es universal, difiere tanto del autor como del simulador de circuitos. Pero no te preocupes lector o lectora, te mostraré los dos modelos más utilizados para representar el NMOS.
+Después de toda esa presentación del funcionamiento el lector o lectora se podría preguntar. *"Oye, ¿Cada vez que quiera análizar un circuito con un NMOS debo dibujar esa caja toda grande?"* y no, existe un símbolo que representa este dispositivo, sin embargo, no es universal, difiere tanto del autor como del simulador de circuitos. Pero no te preocupes lector o lectora, te mostraré los dos modelos más utilizados para representar el NMOS. Primero presentaremos el utilizado por [1], común en algunos análisis de circuitos, el cual se ilustra en la Figura 9. En esta ocasión las ilustraciones (a) y (b) muestran un MOSFET de canal n con cuatro terminales, sin embargo, como ya mencionamos anteriormente los terminales de Source y Body suelen ponerse en corto y por esto nace el modelo de tres terminales de la ilustración (c). Esta representación circuital del MOSFET es especialmente útil debido a que la flecha en el modelo nos representa la dirección en la que fluye la corriente cuando el canal existe, y personalmente es mi favorita.
+
+![Modelo MOSFET](/img/MOSFET/circuit%20model.png)
+<br>**Fig. 9.** Modelo Circuital del MOSFET, Adaptado de [1]
+
+La segunda representación del MOSFET se presenta en la Figura 10. Esta representación nos muestra claramente que los terminales de Souce y Body están en corto, en caso de que no sea así aparecerían de manera separada. Esta representación se utiliza en muchos programas de simulación de circuitos. Le recomiendo al lector o lectora que se acostumbre a ambas representaciones ya que resultan ser las más comunes.
+
+![Modelo MOSFET](/img/MOSFET/circuit%20model%20alt.png)
+<br>**Fig. 10.** Modelo Circuital Alternativo del MOSFET
+
 
 ## ¿Qué pasa si pienso al revés? - PMOS
 
@@ -143,4 +152,4 @@ Un lector o lectora curios@ podría pensar *"Oye, me presentaste una configuraci
 
 ## Referencias
 
-[1] El Sedra, libro solo apto para los eruditos, seres dotados de razón, no para débiles
+[1] A. S. Sedra y K. C. Smith, *Microelectronic Circuits, 7a ed.* New York: Oxford Univ. Press, 2015.
