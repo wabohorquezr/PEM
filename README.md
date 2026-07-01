@@ -75,7 +75,7 @@ E --> F[Pulso ≈13kV]
       - [Introducción al ZVS](./docs/Power%20Electronic/Zero%20Voltage%20Conmutation/Introduction.md)
   
   - **Simulaciones**
-   - [Conmutación Tradicional](./docs/Simulations/traditional_conmutation.md)
+    - [Conmutación Tradicional](./docs/Simulations/traditional_conmutation.md)
 
 ---
 
@@ -92,6 +92,7 @@ Disponibles en la carpeta [./sim](./sim/), con la siguiente Tabla de Contenidos:
         - [Flyback 555.asc](./sim/schematics/Conmutation/555/Flyback%20555.asc)
         - [Flyback 555.sch](./sim/schematics/Conmutation/555/Flyback%20555.sch)
         - [Flyback 555.txt](./sim/schematics/Conmutation/555/Flyback%20555.txt)
+        - [Flyback.slx](./sim/schematics/Conmutation/555/Flyback.slx)
       - **Traditional**
     - [zvs.asc](./sim/schematics/zvs.asc)
 

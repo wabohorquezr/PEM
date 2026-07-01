@@ -30,7 +30,7 @@ El primer programa de simulación fue Qucs-S en su versión 25.2.0, cuyo esquem�
 
 Esto nos permite llegar a la gráfica de tensión presentada en la Figura 2 para una simulación de 10ms, en la cual se observa un comportamiento bastante razonable con lo esperado, un análisis con ecuaciones diferenciales sería ideal para dejar de suponer el resultado, si me suben el presupuesto lo haré. Con MATLAB resultaría sencillo.
 
-![Qucs sim res](/sim/img/Conmutation/555/Qucs_esquematic.png)
+![Qucs sim res](/sim/img/Conmutation/555/Qucs_sim.png)
 <br>**Fig. 2.** Simulación de Qucs-S
 
 
